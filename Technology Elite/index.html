@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>PHP Practice</title>
+        <style>
+            #response {
+            width: 100%;
+            max-width: 600px;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.4;
+            color: #333;
+            resize: none;
+            }
+
+            #response:focus {
+                border-color: #0066cc;
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+            }
+
+        </style>
+    </head>
+    <body>
+        <form id="responseForm" action="process_response.php" method="POST" onsubmit="return validateForm()">
+            <h1>Response Form</h1>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName">
+                <br><br>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName">
+                <br><br>
+                <label for="contactNo">Contact No.:</label>
+                <input type="text" id="contactNo" name="contactNo">
+                <br><br>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <br><br>
+                <label for="response">Response:</label>
+                <br>
+                <textarea type="text" id="response" name="response" rows="4" cols="50" placeholder="Enter your response here..." resize="none" required></textarea>
+                <br><br>
+                <button type="submit">Submit</button>
+        </form>
+        <script>
+            function validateForm() { 
+                console.log('QWERTY');
+            }
+        </script>
+    </body>
+</html>
